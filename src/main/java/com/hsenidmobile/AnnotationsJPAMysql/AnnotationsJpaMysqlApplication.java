@@ -24,7 +24,7 @@ public class AnnotationsJpaMysqlApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("Our DataSource is = " + dataSource);
+		System.out.println("\n\nOur DataSource is = " + dataSource);
 		 Connection connection = dataSource.getConnection();
 		Statement statement = connection.createStatement();
 		ResultSet resultSet = statement.executeQuery("SHOW TABLES");
@@ -35,5 +35,8 @@ public class AnnotationsJpaMysqlApplication implements CommandLineRunner {
 			String tableName = resultSet.getString(1);
 			System.out.println(tableName);
 		}
+
+		System.out.println("++++++++++++ END of The hSenid_Employee +++++++++++++++++++++\n\n");
+
 	}
 }
